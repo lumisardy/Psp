@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.util.Random;
 
 public class ServidorBloqueante {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         int peticiones = 5;
 
@@ -50,6 +50,12 @@ public class ServidorBloqueante {
 
             }
             br.close();
+            try {
+                pr.waitFor();
+            } catch (InterruptedException e) {
+
+                e.printStackTrace();
+            }
 
         }
 
