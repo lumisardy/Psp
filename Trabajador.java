@@ -14,11 +14,12 @@ public class Trabajador {
 
             Thread.sleep(tiempo * 1000);
 
-        } catch (Exception e) {
-            System.out.println("ccacacacaca");
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
 
         System.out.println("Peticion N: " + peticion + " Completada");
+        System.out.println("Tiempo total: " + (tiempo * 1000));
         scanner.close();
 
     }

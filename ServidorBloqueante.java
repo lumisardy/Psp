@@ -34,7 +34,7 @@ public class ServidorBloqueante {
 
                 bfW.write(i);
                 bfW.newLine();
-                bfW.write(numeroAle);
+                bfW.write(String.valueOf(numeroAle));
                 bfW.newLine();
                 bfW.flush();
                 bfW.close();
