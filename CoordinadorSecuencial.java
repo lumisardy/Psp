@@ -18,7 +18,7 @@ public class CoordinadorSecuencial {
 
             long tramo = rango / nprocesos;
 
-            long ini = rango * i;
+            long ini = tramo * i;
             long fin;
 
             if (i == nprocesos)
@@ -50,7 +50,7 @@ public class CoordinadorSecuencial {
             BufferedReader br = new BufferedReader(new InputStreamReader(pr.getInputStream()));
 
             int nPrimos = Integer.parseInt(br.readLine());
-
+            nPrimoTotal += nPrimos;
             br.close();
 
         }
